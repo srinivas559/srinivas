@@ -1,0 +1,164 @@
+Assignment1
+
+Question1
+
+package Package1;
+
+import java.util.Scanner;
+
+public class Example1 {
+public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the name is");
+		String name=sc.nextLine();
+
+		System.out.println("Enter the date");
+        String date=sc.nextLine();
+        
+        System.out.println("My name is " + name +" I will graduate in " + date);
+        
+        
+	}
+
+}
+
+
+
+Question 2
+
+package Package1;
+
+import java.util.Scanner;
+
+public class Example2 {
+
+	public static void main(String[] args) {
+
+		String studentName;
+		int yearOfGraduation = 0;
+		
+		Scanner scanner=new Scanner(System.in);
+		
+		System.out.println("Enter your name:");
+		
+		while(!scanner.hasNext("[A-Za-z.!@#$%^&*]+"))
+		{
+			System.out.println("Please enter a valid name");
+			scanner.next();
+		}
+		studentName=scanner.next();
+		
+		int c = 0;
+		do {
+			
+			
+		System.out.println("Enter your year of graduation:");
+		
+		try 
+        { 
+           
+			yearOfGraduation =Integer.parseInt(scanner.next());
+            c=0;
+        }  
+        catch (NumberFormatException e)  
+        { 
+            
+        	System.out.println("Please enter a valid year"); 
+            c++;
+            
+        } 
+		}while(c!=0);
+		
+		System.out.println(studentName);
+		System.out.println(yearOfGraduation);
+		
+		
+
+	}
+
+}
+
+Question 3
+
+package Package1;
+import java.util.Scanner;
+
+public class Example3 {
+	       public static void main(String[] args) {
+	        Scanner keyboard = new Scanner(System.in);
+	        int answer1, answer2, answer3,answer4, score = 0;
+	        
+	        System.out.print("Are you ready for a quiz? ");
+	        keyboard.next();
+	        System.out.println("Okay, here it comes!");
+	        System.out.println();
+	        System.out.println("Q1) What is the capital of Alaska?");
+	        System.out.println("\t1) Melbourne");//\t is used for  tab space
+	        System.out.println("\t2) Anchorage");
+	        System.out.println("\t3) Juneau");
+	        System.out.println();
+	        System.out.print("> ");
+	        answer1 = keyboard.nextInt();
+	        System.out.println();
+	        if (answer1 == 3) {
+	            System.out.println("That's right!");
+	            score++;
+	        } else {
+	            System.out.println("Sorry, Juneau is the capital of Alaska.");
+	        }
+	        System.out.println();
+	        System.out.println("Q2) Can you store the value \"cat\" in a variable of type int?");
+	        System.out.println("\t1) yes");
+	        System.out.println("\t2) no");
+	        System.out.println();
+	        System.out.print("> ");
+	        answer2 = keyboard.nextInt();
+	        System.out.println();
+	        if (answer2 == 2) {
+	            System.out.println("That's right!");
+	            score++;
+	        } else {
+	            System.out.println("Sorry, \"cat\" is a string. ints can only store numbers.");
+	        }
+	        System.out.println();
+	        System.out.println("Q3) What is the result of 9+6/3?");
+	        System.out.println("\t1) 5");
+	        System.out.println("\t2) 11");
+	        System.out.println("\t3) 15/3");
+	        System.out.println();
+	        System.out.print("> ");
+	        answer3 = keyboard.nextInt();
+	        System.out.println();
+	        if (answer3 == 2) {
+	            System.out.println("That's correct!");
+	            score++;
+	        } else {
+	            System.out.println("Sorry, 11 is the result.");
+	        }
+	        
+	        System.out.println();
+	        System.out.println("How many planets in solarsyatem");
+	        System.out.println("\t1)8");
+	        System.out.println("\t2)4");
+	        System.out.println("\t3)9");
+	        System.out.println("\t4)None of the above");
+	        System.out.println("> ");
+	        answer4=keyboard.nextInt();
+			
+	        if(answer4==3)
+			{
+				System.out.println("This is right answer");score++;
+			}
+			else
+			{
+				System.out.println("the number of planets in solar system is 9");
+		        
+			}
+			
+	        System.out.println();
+	        System.out.println("Overall, you got " + score + " out of 4 correct.");
+	        System.out.println("Thanks for playing!");
+	    }
+	}
+
+
